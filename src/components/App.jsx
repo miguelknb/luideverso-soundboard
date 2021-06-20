@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: #384559;
+    background-color: #4B4237;
   }
 `;
 const Container = styled.div`

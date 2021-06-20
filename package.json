@@ -8,10 +8,13 @@
     "@testing-library/user-event": "^12.1.10",
     "rc-slider": "^9.7.2",
     "react": "^17.0.2",
+    "react-audio-waveform": "^0.0.5",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.0",
+    "styled-icons": "^10.34.0",
     "use-sound": "^4.0.0",
+    "wavesurfer-react": "^2.0.8",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

@@ -3,42 +3,100 @@ import styled from "styled-components";
 import useSound from "use-sound";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import {PlayCircle} from "@styled-icons/boxicons-regular/PlayCircle"
+import {StopCircle} from "@styled-icons/boxicons-regular/StopCircle"
+import {Soundwave} from "@styled-icons/bootstrap/Soundwave"
+
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  height: 7rem;
+  /* height: 12rem; */
   width: 10rem;
   border-radius: 5px;
-  background-color: #a1b5cf;
+  background-color: #211F1C;
   margin-bottom: 2rem;
 	margin-right: 1rem;
 	align-items: center;
+
+  /* border: ${props=> props.isPlaying ? "solid 5px #D5A021" : "none"}; */
+  box-shadow: ${props=> props.isPlaying ? "5px 5px #D5A021" : "none"};
+  transition: box-shadow ease-in-out .5s;
 `;
 
-const PlayButton = styled.div`
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const WaveContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: .3rem;
+`;
+
+const PlayButton = styled(PlayCircle)`
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  color: #65e688;
+`;
+
+const SoundIcon  = styled(Soundwave)`
   height: 2.5rem;
   width: 2.5rem;
-	padding: 0.2rem;
-  border-radius: 10px;
-  background-color: #5dba6b;
-  cursor: pointer;
-	margin-bottom: 1rem;
+  /* color: white; */
+  color: ${props => props.isPlaying ? "#5397d4" : "#FFFF"};
+
+  transition: color .3s ease-in;
 `;
 
-const SoundBox = ({ sound }) => {
-  const soundPath = "/sounds/" + sound.file;
+const StopButton = styled(StopCircle)`
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  color: #e66b65;
+`;
 
-  const [volume, setVolume] = useState(5);
+const Name = styled.p`
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #EDE7D9;
+`;
 
-  const [play] = useSound(soundPath, { volume: volume });
+const SoundBox = ({ soundName }) => {
+  const soundPath = "/sounds/" + soundName.file;
 
-  return (
+  const [volume, setVolume] = useState(1);
+  
+  const [play, {stop, duration}] = useSound(soundPath, { volume: volume });
+  const [isPlaying, setPlaying] = useState(false);
+
+  
+  const Play = () => {
+    stop();
+    play();
+
+    setPlaying(true);
+
+    setTimeout( () => {
+      setPlaying(false);
+    }, duration)
+  
+  }
+
+  return ( 
     <>
-      <Container>
-        <p>{sound.name}</p>
-        <PlayButton onMouseDown={() => play()}></PlayButton>
+      <Container isPlaying={isPlaying}>
+        <Name>{soundName.name}</Name>
+        <ButtonsContainer>
+          <PlayButton onClick ={() => Play()}></PlayButton>
+          <StopButton onClick ={() => { stop(); setPlaying(false) }}></StopButton>
+        </ButtonsContainer>
+        <WaveContainer>
+          <SoundIcon isPlaying={isPlaying}/>
+        </WaveContainer>
         <Slider
           defaultValue={0.5}
           startPoint={0}
