@@ -42,7 +42,9 @@ const PlayButton = styled(PlayCircle)`
   height: 3rem;
   width: 3rem;
   cursor: pointer;
-  color: #65e688;
+  color: ${props => props.isPlaying ? "#5397d4" : "#65e688"};
+
+  transition: color .3s ease-in;
 `;
 
 const SoundIcon  = styled(Soundwave)`
@@ -101,7 +103,7 @@ const SoundBox = ({ soundName }) => {
           <Name>{soundName.name}</Name>
         </NameContainer>
         <ButtonsContainer>
-          <PlayButton onClick ={() => Play()}></PlayButton>
+          <PlayButton onClick ={() => Play()} isPlaying={isPlaying}></PlayButton>
           <StopButton onClick ={() => { stop(); setPlaying(false) }}></StopButton>
         </ButtonsContainer>
         <WaveContainer>

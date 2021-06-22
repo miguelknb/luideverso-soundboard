@@ -140,7 +140,7 @@ export const sounds = [
     file: "Vinheta _Brasil Sil Sil_ - Globo (Anos 2000).mp3",
   },
   {
-    name: "PARA COM ESSA PORRA AI MEU IRMÃO",
+    name: "PARA COM ESSA PORRA",
     file: "PARA COM ESSA PORRA AI MEU IRMÃO.mp3",
   },
 
