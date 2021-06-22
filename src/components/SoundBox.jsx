@@ -64,6 +64,7 @@ const StopButton = styled(StopCircle)`
 const NameContainer = styled.div`
   display: flex;
   height: 5rem;
+  align-items: flex-start;
 `
 
 const Name = styled.p`

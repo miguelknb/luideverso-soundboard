@@ -89,7 +89,7 @@ export const sounds = [
   },
   {
     name: "Comunistinha de merda",
-    file: "NEGATIVO COMUNISTINHAD DE MERDA.mp3",
+    file: "NEGATIVO-COMUNISTINHAD-DE-MERDA.mp3",
   },
   {
     name: "O Brasil ta lascado",
@@ -123,6 +123,27 @@ export const sounds = [
     name: "Vinheta Brasil Sil Sil",
     file: "Vinheta _Brasil Sil Sil_ - Globo (Anos 2000).mp3",
   },
+  {
+    name: "To ficando nervoso",
+    file: "TO FICANDO NERVOSO.mp3",
+  },
+  {
+    name: "Torcedor do América",
+    file: "TORCEDOR DO AMERICA ESSE CARA AINDA TA AI.mp3",
+  },
+  {
+    name: "Filho da puta",
+    file: "TORCEDOR DO AMERICA O FILHO DA PUTA.mp3",
+  },
+  {
+    name: "Vinheta Brasil Sil Sil",
+    file: "Vinheta _Brasil Sil Sil_ - Globo (Anos 2000).mp3",
+  },
+  {
+    name: "PARA COM ESSA PORRA AI MEU IRMÃO",
+    file: "PARA COM ESSA PORRA AI MEU IRMÃO.mp3",
+  },
+
 
 
 ];
