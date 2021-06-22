@@ -6,7 +6,7 @@ import "rc-slider/assets/index.css";
 import {PlayCircle} from "@styled-icons/boxicons-regular/PlayCircle"
 import {StopCircle} from "@styled-icons/boxicons-regular/StopCircle"
 import {Soundwave} from "@styled-icons/bootstrap/Soundwave"
-import {StarFill} from "@styled-icons/bootstrap/StarFill"
+// import {StarFill} from "@styled-icons/bootstrap/StarFill"
 
 
 const Container = styled.div`
@@ -48,19 +48,19 @@ const PlayButton = styled(PlayCircle)`
   transition: color .3s ease-in;
 `;
 
-const StarButton = styled(StarFill)`
-  position: absolute;
-  margin-top: -5.5rem;
-  margin-left: 5rem;
-  padding: .2rem;
-  height: 1.5rem;
-  width: 1.5rem;
-  cursor: pointer;
-  color: ${props => props.isFavorite ? "#ffbb00" : "white"};
-  opacity: ${props => props.isFavorite ? "100%" : "20%"};
+// const StarButton = styled(StarFill)`
+//   position: absolute;
+//   margin-top: -5.5rem;
+//   margin-left: 5rem;
+//   padding: .2rem;
+//   height: 1.5rem;
+//   width: 1.5rem;
+//   cursor: pointer;
+//   color: ${props => props.isFavorite ? "#ffbb00" : "white"};
+//   opacity: ${props => props.isFavorite ? "100%" : "20%"};
 
-  transition: color .3s ease-in;
-`;
+//   transition: color .3s ease-in;
+// `;
 
 const SoundIcon  = styled(Soundwave)`
   height: 2.5rem;
@@ -97,17 +97,17 @@ const SoundBox = (props) => {
   
   const [play, {stop, duration}] = useSound(soundPath, { volume: volume });
   const [isPlaying, setPlaying] = useState(false);
-  const [isFavorite, setFavorite] = useState(false);
+  // const [isFavorite, setFavorite] = useState(false);
 
-  const handleFavorite = (sound) => {
-    if(isFavorite) {
-      props.removeFavorite(sound);
-    }
-    else {
-      props.addFavorite(sound);
-    }
-    setFavorite(!isFavorite);
-  }
+  // const handleFavorite = (sound) => {
+  //   if(isFavorite) {
+  //     props.removeFavorite(sound);
+  //   }
+  //   else {
+  //     props.addFavorite(sound);
+  //   }
+  //   setFavorite(!isFavorite);
+  // }
   
   const Play = () => {
     stop();
