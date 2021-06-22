@@ -21,14 +21,14 @@ export const sounds = [
   },
   {
     name: "Alice Ze Botinha",
-    file: "ALICE ZE BOTINHA.mp3",
+    file: "ALICE-ZE-BOTINHA.mp3",
   },
   {
     name: "BOULOS NÃO DA MAIS",
     file: "BOULOS NÃO DA MAIS.mp3",
   },
   {
-    name: "breakinnews",
+    name: "breaking news",
     file: "breakinnews.mp3",
   },
   {
@@ -76,11 +76,53 @@ export const sounds = [
     file: "OLHA O QUE ELE FEZ.mp3",
   },
   {
-    name: "DATENA REALIDADE",
-    file: "DATENA REALIDADE.mp3",
+    name: "TEMER POSSUIDO",
+    file: "TEMER POSSUIDO.mp3",
   },
   {
-    name: "DATENA REALIDADE",
-    file: "DATENA REALIDADE.mp3",
+    name: "VIROU PASSEIO",
+    file: "VIROU PASSEIO.mp3",
   },
+  {
+    name: "Noossa",
+    file: "noossa.mp3",
+  },
+  {
+    name: "Comunistinha de merda",
+    file: "NEGATIVO COMUNISTINHAD DE MERDA.mp3",
+  },
+  {
+    name: "O Brasil ta lascado",
+    file: "o-brasil-ta-lascado.mp3",
+  },
+  {
+    name: "TÁ TÃO ENGRAÇADO",
+    file: "TÁ TÃO ENGRAÇADO.mp3",
+  },
+  {
+    name: "Pelo amor de Deus",
+    file: "PELOAMORDEDEUS.mp3",
+  },
+  {
+    name: "Funk Renan",
+    file: "FUNK RENAN.mp3",
+  },
+  {
+    name: "Haja coracao",
+    file: "haja-coracao.mp3",
+  },
+  {
+    name: "Lula: não seja leviano",
+    file: "LULA NAO SEJA LEVIANO.mp3",
+  },
+  {
+    name: "Vei que viaje é essa vei",
+    file: "vei que viaje é essa vei.mp3",
+  },
+  {
+    name: "Vinheta Brasil Sil Sil",
+    file: "Vinheta _Brasil Sil Sil_ - Globo (Anos 2000).mp3",
+  },
+
+
 ];

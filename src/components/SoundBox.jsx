@@ -19,6 +19,8 @@ const Container = styled.div`
   margin-bottom: 2rem;
 	margin-right: 1rem;
 	align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
 
   /* border: ${props=> props.isPlaying ? "solid 5px #D5A021" : "none"}; */
   box-shadow: ${props=> props.isPlaying ? "5px 5px #D5A021" : "none"};
@@ -45,7 +47,7 @@ const PlayButton = styled(PlayCircle)`
 
 const SoundIcon  = styled(Soundwave)`
   height: 2.5rem;
-  width: 2.5rem;
+  width: 3.5rem;
   /* color: white; */
   color: ${props => props.isPlaying ? "#5397d4" : "#FFFF"};
 
@@ -58,6 +60,11 @@ const StopButton = styled(StopCircle)`
   cursor: pointer;
   color: #e66b65;
 `;
+
+const NameContainer = styled.div`
+  display: flex;
+  height: 5rem;
+`
 
 const Name = styled.p`
   font-size: 1.3rem;
@@ -89,7 +96,9 @@ const SoundBox = ({ soundName }) => {
   return ( 
     <>
       <Container isPlaying={isPlaying}>
-        <Name>{soundName.name}</Name>
+        <NameContainer>
+          <Name>{soundName.name}</Name>
+        </NameContainer>
         <ButtonsContainer>
           <PlayButton onClick ={() => Play()}></PlayButton>
           <StopButton onClick ={() => { stop(); setPlaying(false) }}></StopButton>

@@ -13,6 +13,7 @@
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.0",
     "styled-icons": "^10.34.0",
+    "styled-media-query": "^2.1.2",
     "use-sound": "^4.0.0",
     "wavesurfer-react": "^2.0.8",
     "web-vitals": "^1.0.1"
