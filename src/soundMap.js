@@ -136,13 +136,110 @@ export const sounds = [
     file: "TORCEDOR DO AMERICA O FILHO DA PUTA.mp3",
   },
   {
-    name: "Vinheta Brasil Sil Sil",
-    file: "Vinheta _Brasil Sil Sil_ - Globo (Anos 2000).mp3",
+    name: "Ovinho do Mito",
+    file: "OVINHO DO MITPO.mp3",
   },
   {
-    name: "PARA COM ESSA PORRA",
-    file: "PARA COM ESSA PORRA AI MEU IRMÃO.mp3",
+    name: "Ritmo de festa",
+    file: "ritmo de festa.mp3",
   },
+  {
+    name: "TÁ TÃO ENGRAÇADO",
+    file: "TÁ TÃO ENGRAÇADO.mp3",
+  },
+  {
+    name: "TOURO CHIFRUDO",
+    file: "TOURO CHIFRUDO.mp3",
+  },
+  {
+    name: "Bambu ta Gemendo",
+    file: "BAMBU TA GEMENDO.mp3",
+  },
+  {
+    name: "Bolsonaro tem que se fuder",
+    file: "BOLSONARO TEM QUE SE FUDER.mp3",
+  },
+  {
+    name: "Bom dia Mourão",
+    file: "BOM DIA DO MOURAO.mp3",
+  },
+  {
+    name: "Drogado noia",
+    file: "DROGADO NOIA.mp3",
+  },
+  {
+    name: "Eu não suporto mais",
+    file: "EU NÃO SUPORTO MAIS.mp3",
+  },
+  {
+    name: "Galvão ninguém sabe",
+    file: "GALVÃO BUENO NINGUÉM SABE.mp3",
+  },
+  {
+    name: "Jiripoca vai piar",
+    file: "JIRIPOCA VAI PIAR.mp3",
+  },
+  {
+    name: "Aaaaaeeeitaaaa",
+    file: "aaaaaaaaaaeeeeeeitaaaaa.mp3",
+  },
+  {
+    name: "Dança gatinho dança",
+    file: "danca-gatinho-danca.mp3",
+  },
+  {
+    name: "Esse é meu patrão",
+    file: "esse-e-meu-patrao_uo8CCdn.mp3",
+  },
+  {
+    name: "Hitorias botao",
+    file: "hitorias-botao.mp3",
+  },
+  {
+    name: "Iiihaaaaaa",
+    file: "iha.mp3",
+  },
+  {
+    name: "Pare!!!",
+    file: "pare.mp3",
+  },
+  {
+    name: "Ratinho",
+    file: "ratinho_1.mp3",
+  },
+  {
+    name: "Xaropinho Rapaz",
+    file: "vinheta-xaropinho-rapaz_dx3f4Be.mp3",
+  },
+  {
+    name: "Vixi Ratinho",
+    file: "vixi-ratinho.mp3",
+  },
+  {
+    name: "Policia Maluco",
+    file: "POLICIA MALUCO.mp3",
+  },
+  {
+    name: "Sai da frente satanás",
+    file: "SAI DA FRENTE SATANÁS.mp3",
+  },
+  {
+    name: "Tava fora do Brasil",
+    file: "TAVA-FORA-DO-BRASIL-IRMÃO.mp3",
+  },
+  {
+    name: "O que diz o Livrinho",
+    file: "O QUE É QUE DIZ O LIVRINHO.mp3",
+  },
+  {
+    name: "Palmas pra ele",
+    file: "NOSSA PALMAS PRA ELE.mp3",
+  },
+  {
+    name: "Hora do show Porra",
+    file: "hora-do-shooow-porra.mp3",
+  },
+
 
 
 

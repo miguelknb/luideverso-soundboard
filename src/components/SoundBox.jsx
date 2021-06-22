@@ -6,6 +6,7 @@ import "rc-slider/assets/index.css";
 import {PlayCircle} from "@styled-icons/boxicons-regular/PlayCircle"
 import {StopCircle} from "@styled-icons/boxicons-regular/StopCircle"
 import {Soundwave} from "@styled-icons/bootstrap/Soundwave"
+import {StarFill} from "@styled-icons/bootstrap/StarFill"
 
 
 const Container = styled.div`
@@ -47,6 +48,20 @@ const PlayButton = styled(PlayCircle)`
   transition: color .3s ease-in;
 `;
 
+const StarButton = styled(StarFill)`
+  position: absolute;
+  margin-top: -5.5rem;
+  margin-left: 5rem;
+  padding: .2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  color: ${props => props.isFavorite ? "#ffbb00" : "white"};
+  opacity: ${props => props.isFavorite ? "100%" : "20%"};
+
+  transition: color .3s ease-in;
+`;
+
 const SoundIcon  = styled(Soundwave)`
   height: 2.5rem;
   width: 3.5rem;
@@ -75,14 +90,24 @@ const Name = styled.p`
   color: #EDE7D9;
 `;
 
-const SoundBox = ({ soundName }) => {
-  const soundPath = "/sounds/" + soundName.file;
+const SoundBox = (props) => {
+  const soundPath = "/sounds/" + props.soundName.file;
 
   const [volume, setVolume] = useState(1);
   
   const [play, {stop, duration}] = useSound(soundPath, { volume: volume });
   const [isPlaying, setPlaying] = useState(false);
+  const [isFavorite, setFavorite] = useState(false);
 
+  const handleFavorite = (sound) => {
+    if(isFavorite) {
+      props.removeFavorite(sound);
+    }
+    else {
+      props.addFavorite(sound);
+    }
+    setFavorite(!isFavorite);
+  }
   
   const Play = () => {
     stop();
@@ -99,8 +124,9 @@ const SoundBox = ({ soundName }) => {
   return ( 
     <>
       <Container isPlaying={isPlaying}>
+        {/* <StarButton isFavorite={isFavorite} onClick={ () => handleFavorite(props.soundName) } />   */}
         <NameContainer>
-          <Name>{soundName.name}</Name>
+          <Name>{props.soundName.name}</Name>
         </NameContainer>
         <ButtonsContainer>
           <PlayButton onClick ={() => Play()} isPlaying={isPlaying}></PlayButton>

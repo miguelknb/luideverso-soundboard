@@ -42,6 +42,30 @@ const SoundPanel = () => {
   
   const [searchTerm, setSearchTerm] = React.useState("");
   const [searchResults, setSearchResults] = React.useState([]);
+  const [favorites, setFavorite] = React.useState([]);
+
+  const AddFavorite = (sound) => {
+    let newFavorites = favorites;
+    newFavorites.push(sound)
+    setFavorite(newFavorites)
+
+    console.log('favorites', favorites)
+  }
+
+  const RemoveFavorite = (sound) => {
+    let newFavorites = favorites;
+
+    var index = newFavorites.indexOf(sound);
+    while (index > -1) {
+      newFavorites.splice(index, 1);
+      index = newFavorites.indexOf(sound);
+    }
+    setFavorite(newFavorites)
+
+    console.log('favorites', favorites)
+  }
+
+
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
@@ -52,6 +76,14 @@ const SoundPanel = () => {
       sound.name.toLowerCase().includes(searchTerm.toLowerCase()) ||  sound.file.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(resultSounds);
+
+    // favorites.map( (favorite)=> {
+    //   let newArray = searchResults;
+    //   var index = newArray.indexOf(favorite);
+    //   newArray.unshift(newArray.splice(index, 1)[0]);
+    //   setSearchResults(newArray)
+    // })
+
   }, [searchTerm]);
 
   return (
@@ -65,10 +97,18 @@ const SoundPanel = () => {
             onChange={handleChange}
           />
         </SearchBox>
+        {
+          searchResults.length !== 0 && searchTerm !== "" && 
+          <Container>
+            {searchResults.map((sound) => {
+              return <SoundBox soundName={sound} addFavorite={AddFavorite} removeFavorite={RemoveFavorite}/>;
+            })}
+          </Container>
+        }
         <Container>
-          {searchResults.map((sound) => {
-            return <SoundBox soundName={sound} />;
-          })}
+            {sounds.map((sound) => {
+              return <SoundBox soundName={sound} addFavorite={AddFavorite} removeFavorite={RemoveFavorite}/>;
+            })}
         </Container>
       </MainContainer>
     </>
