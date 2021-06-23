@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { sounds } from "../soundMap";
-import SoundBox from "./SoundBox";
+// import SoundBox from "./SoundBox";
+import NewSoundBox from "./NewSoundBox";
 import media from "styled-media-query";
 
 const MainContainer = styled.div`
@@ -101,13 +102,13 @@ const SoundPanel = () => {
           searchResults.length !== 0 && searchTerm !== "" && 
           <Container>
             {searchResults.map((sound) => {
-              return <SoundBox soundName={sound} addFavorite={AddFavorite} removeFavorite={RemoveFavorite}/>;
+              return <NewSoundBox soundName={sound} addFavorite={AddFavorite} removeFavorite={RemoveFavorite}/>;
             })}
           </Container>
         }
         <Container>
             {sounds.map((sound) => {
-              return <SoundBox soundName={sound} addFavorite={AddFavorite} removeFavorite={RemoveFavorite}/>;
+              return <NewSoundBox soundName={sound}/>;
             })}
         </Container>
       </MainContainer>

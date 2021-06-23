@@ -44,7 +44,6 @@ const PlayButton = styled(PlayCircle)`
   width: 3rem;
   cursor: pointer;
   color: ${props => props.isPlaying ? "#5397d4" : "#65e688"};
-
   transition: color .3s ease-in;
 `;
 
